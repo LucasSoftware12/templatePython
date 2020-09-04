@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cursus</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="p-3">
+  <div class="mt-1 p-1 bg-light" style="border-radius: 25px;">
+
+    <div class="navbar navbar-dark bg-white d-flex flex-row justify-content-between px-0 py-0" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+      <div class="col-md-2 px-0">
+        <button class="btn btn-danger corner-btn mr-2" style="border-radius: 0px; border-top-left-radius: 25px;">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="navbar-brand py-0 text-dark">Cursus</a>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group bg-light px-3" style="border-radius: 25px;">
+        <div class="input-group-prepend">
+          <img src="{% static 'img/search.png' %}" alt="search" style="width:20px; height:20px;">
+        </div>
+        <input class="form-control text-muted bg-light border-0" placeholder="Search for tutorials, courses and articles">
+      </div>
+      </div>
+
+      <div class="col-md-4 d-flex flex-row justify-content-end justify-content-between align-items-center">
+        <a href="#" class="btn btn-danger btn-sm" style="border-radius: 50px;">Create New Course</a>
+        <a href="#">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 512 512" height="25" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M259.801,17.598L2.337,220.544l34.9,41.435l28.38-21.694c0,0,33.763,179.882,33.763,217.234h318.916   c-0.107-36.357,33.542-215.3,33.542-215.3l19.634,15.382l37.105-41.463L259.801,17.598z M255.471,310.683   c-34.577,0-62.581-28.036-62.581-62.583c0-34.587,28.004-62.591,62.581-62.591c34.557,0,62.582,28.004,62.582,62.591   C318.053,282.646,290.028,310.683,255.471,310.683z" fill="gray"/></g></svg>
+        </a>
+        <a href="#">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="25" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M67,148.7c11,5.8,163.8,89.1,169.5,92.1c5.7,3,11.5,4.4,20.5,4.4c9,0,14.8-1.4,20.5-4.4c5.7-3,158.5-86.3,169.5-92.1   c4.1-2.1,11-5.9,12.5-10.2c2.6-7.6-0.2-10.5-11.3-10.5H257H65.8c-11.1,0-13.9,3-11.3,10.5C56,142.9,62.9,146.6,67,148.7z"/><path d="M455.7,153.2c-8.2,4.2-81.8,56.6-130.5,88.1l82.2,92.5c2,2,2.9,4.4,1.8,5.6c-1.2,1.1-3.8,0.5-5.9-1.4l-98.6-83.2   c-14.9,9.6-25.4,16.2-27.2,17.2c-7.7,3.9-13.1,4.4-20.5,4.4c-7.4,0-12.8-0.5-20.5-4.4c-1.9-1-12.3-7.6-27.2-17.2l-98.6,83.2   c-2,2-4.7,2.6-5.9,1.4c-1.2-1.1-0.3-3.6,1.7-5.6l82.1-92.5c-48.7-31.5-123.1-83.9-131.3-88.1c-8.8-4.5-9.3,0.8-9.3,4.9   c0,4.1,0,205,0,205c0,9.3,13.7,20.9,23.5,20.9H257h185.5c9.8,0,21.5-11.7,21.5-20.9c0,0,0-201,0-205   C464,153.9,464.6,148.7,455.7,153.2z"/></g></svg>
+        </a>
+        <a href="#">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="25" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M381.7,225.9c0-97.6-52.5-130.8-101.6-138.2c0-0.5,0.1-1,0.1-1.6c0-12.3-10.9-22.1-24.2-22.1c-13.3,0-23.8,9.8-23.8,22.1   c0,0.6,0,1.1,0.1,1.6c-49.2,7.5-102,40.8-102,138.4c0,113.8-28.3,126-66.3,158h384C410.2,352,381.7,339.7,381.7,225.9z"/><path d="M256.2,448c26.8,0,48.8-19.9,51.7-43H204.5C207.3,428.1,229.4,448,256.2,448z"/></g></svg>
+        </a>
+        <a href="#">
+          <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 50 50" height="25" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="25" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="25" cy="25" fill="none" r="24" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><rect fill="none" height="50" width="50"/><path d="M29.933,35.528c-0.146-1.612-0.09-2.737-0.09-4.21c0.73-0.383,2.038-2.825,2.259-4.888c0.574-0.047,1.479-0.607,1.744-2.818  c0.143-1.187-0.425-1.855-0.771-2.065c0.934-2.809,2.874-11.499-3.588-12.397c-0.665-1.168-2.368-1.759-4.581-1.759  c-8.854,0.163-9.922,6.686-7.981,14.156c-0.345,0.21-0.913,0.878-0.771,2.065c0.266,2.211,1.17,2.771,1.744,2.818  c0.22,2.062,1.58,4.505,2.312,4.888c0,1.473,0.055,2.598-0.091,4.21c-1.261,3.39-7.737,3.655-11.473,6.924  c3.906,3.933,10.236,6.746,16.916,6.746s14.532-5.274,15.839-6.713C37.688,39.186,31.197,38.93,29.933,35.528z"/></svg>
+        </a>
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-3">
+        <table id="sideTable" class="table bg-white table-hover" style="border-bottom-left-radius: 25px;">
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getContacts" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2016 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <rect fill="none" stroke="currentColor" x="0.5" y="0.5" width="15" height="15" rx="2"/>
+                                    <path fill="none" stroke-linecap="round" stroke="currentColor" d="M 3.5 5.5 L 12.5 5.5"/>
+                                    <path fill="none" stroke-linecap="round" stroke="currentColor" d="M 12.5 5.5 L 9.5 2.5"/>
+                                    <path fill="none" stroke-linecap="round" stroke="currentColor" d="M 12.5 5.5 L 9.5 8.5"/>
+                                    <path fill="none" stroke-linecap="round" stroke="currentColor" d="M 3.5 10.5 L 12.5 10.5"/>
+                                    <path fill="none" stroke-linecap="round" stroke="currentColor" d="M 3.5 10.5 L 6.5 7.5"/>
+                                    <path fill="none" stroke-linecap="round" stroke="currentColor" d="M 3.5 10.5 L 6.5 13.5"/>
+                                </svg>
+
+                        </span>
+                        Analytics
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getMessages" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2014 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                  <path fill="none" stroke="currentColor" d="M 4.5 2.5 C 3 2.5 2.5 3 2.5 4.5 L 2.5 10.5 C 2.5 12 3 12.5 4.5 12.5 L 5.5 12.5 L 5.5 15.5 L 9 12.5 L 12 12.5 L 12 12.5 C 13 12.5 13.5 12 13.5 10.5 L 13.5 4.5 C 13.5 3 12 2.5 11.5 2.5 L 4.5 2.5 4"/>
+                                  <path fill="none" stroke="currentColor" stroke-linecap="square" d="M 5.5 5.5 L 10.5 5.5"/>
+                                  <path fill="none" stroke="currentColor" stroke-linecap="square" d="M 5.5 7.5 L 10.5 7.5"/>
+                                  <path fill="none" stroke="currentColor" stroke-linecap="square" d="M 5.5 9.5 L 10.5 9.5"/>
+                                </svg>
+
+                        </span>
+                        Messages
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getCamera" href="#">
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <span>
+                                <!-- Copyright © 2016 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <path d="M 12 3.5 L 11.5 2.41528547 C 11.5 2.41528547 11.0826911 1.5 10.5 1.5 L 5.5 1.5 C 4.91636759 1.5 4.5 2.41528544 4.5 2.41528544 L 4 3.5 L 2.38174379 3.5 C 2.38174379 3.5 0.5 3.65837937 0.5 5.5 L 0.5 12.5 C 0.5 14.3416206 2.38174379 14.5 2.38174379 14.5 L 13.5 14.5 C 13.5 14.5 15.5 14.3416206 15.5 12.5 L 15.5 5.5 C 15.5 3.65837937 13.5 3.5 13.5 3.5 L 12 3.5 Z" fill="none" stroke="currentColor"/>
+                                    <path d="M 8 12.5 C 10.209139 12.5 12 10.709139 12 8.5 C 12 6.290861 10.209139 4.5 8 4.5 C 5.790861 4.5 4 6.290861 4 8.5 C 4 10.709139 5.790861 12.5 8 12.5 Z" fill="none" stroke="currentColor"/>
+                                    <path d="M 8 10.5 C 9.1045695 10.5 10 9.6045695 10 8.5 C 10 7.3954305 9.1045695 6.5 8 6.5 C 6.8954305 6.5 6 7.3954305 6 8.5 C 6 9.6045695 6.8954305 10.5 8 10.5 Z" fill="none" stroke="currentColor"/>
+                                </svg>
+
+                        </span>
+                        Pictures
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getLocations" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2015 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <circle fill="none" stroke="currentColor" cx="8" cy="8" r="6"/>
+                                    <path fill="none" stroke="currentColor" d="M 8 0 L 8 6.5"/>
+                                    <path fill="none" stroke="currentColor" d="M 0 8 L 6.5 8"/>
+                                    <path fill="none" stroke="currentColor" d="M 8 9.5 L 8 16"/>
+                                    <path fill="none" stroke="currentColor" d="M 9.5 8 L 16 8"/>
+                                </svg>
+                        </span>
+                        Create Course
+                    </a>
+                </td>
+                </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getMedia" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2015 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <path fill="currentColor" d="M 13.4475645 6.5701038 C 14.1131101 6.95915994 14.5 7.44243562 14.5 8 C 14.5 9.52952015 11.5885604 10.5 8 10.5 C 4.41143956 10.5 1.5 9.52952015 1.5 8 C 1.5 7.44243562 1.88688992 6.95915994 2.55243554 6.5701038 C 2.95984566 6.75017534 3.43583057 6.90963763 3.96620982 7.04342621 C 3.94919939 7.04895616 3.93228678 7.05452352 3.91547313 7.06012807 C 2.98303097 7.37094212 2.5 7.7516133 2.5 8 C 2.5 8.2483867 2.98303097 8.62905788 3.91547313 8.93987193 C 4.97873363 9.2942921 6.43777802 9.5 8 9.5 C 9.56222198 9.5 11.0212664 9.2942921 12.0845269 8.93987193 C 13.016969 8.62905788 13.5 8.2483867 13.5 8 C 13.5 7.7516133 13.016969 7.37094212 12.0845269 7.06012807 C 12.0677132 7.05452352 12.0508006 7.04895616 12.0337902 7.04342621 C 12.5641694 6.90963763 13.0401543 6.75017534 13.4475645 6.5701038 Z"/>
+                                    <path fill="currentColor" d="M 13.4475645 10.5701038 C 14.1131101 10.9591599 14.5 11.4424356 14.5 12 C 14.5 13.5295201 11.5885604 14.5 8 14.5 C 4.41143956 14.5 1.5 13.5295201 1.5 12 C 1.5 11.4424356 1.88688992 10.9591599 2.55243554 10.5701038 C 2.95984566 10.7501753 3.43583057 10.9096376 3.96620982 11.0434262 C 3.94919939 11.0489562 3.93228678 11.0545235 3.91547313 11.0601281 C 2.98303097 11.3709421 2.5 11.7516133 2.5 12 C 2.5 12.2483867 2.98303097 12.6290579 3.91547313 12.9398719 C 4.97873363 13.2942921 6.43777802 13.5 8 13.5 C 9.56222198 13.5 11.0212664 13.2942921 12.0845269 12.9398719 C 13.016969 12.6290579 13.5 12.2483867 13.5 12 C 13.5 11.7516133 13.016969 11.3709421 12.0845269 11.0601281 C 12.0677132 11.0545235 12.0508006 11.0489562 12.0337902 11.0434262 C 12.5641694 10.9096376 13.0401543 10.7501753 13.4475645 10.5701038 Z"/>
+                                    <path fill="currentColor" d="M 14.5 4 C 14.5 2.47047985 11.5885604 1.5 8 1.5 C 4.41143956 1.5 1.5 2.47047985 1.5 4 C 1.5 5.52952015 4.41143956 6.5 8 6.5 C 11.5885604 6.5 14.5 5.52952015 14.5 4 Z M 3.91547313 4.93987193 C 2.98303097 4.62905788 2.5 4.2483867 2.5 4 C 2.5 3.7516133 2.98303097 3.37094212 3.91547313 3.06012807 C 4.97873363 2.7057079 6.43777802 2.5 8 2.5 C 9.56222198 2.5 11.0212664 2.7057079 12.0845269 3.06012807 C 13.016969 3.37094212 13.5 3.7516133 13.5 4 C 13.5 4.2483867 13.016969 4.62905788 12.0845269 4.93987193 C 11.0212664 5.2942921 9.56222198 5.5 8 5.5 C 6.43777802 5.5 4.97873363 5.2942921 3.91547313 4.93987193 Z"/>
+                                </svg>
+
+                        </span>
+                        My Certificates
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getLive" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2015 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 11">
+                                    <path fill="none" stroke="currentColor" d="M 7.942 8.124 C 6.53 8.124 5.385 6.95 5.385 5.499 C 5.385 4.05 6.53 2.875 7.942 2.875 C 9.355 2.875 10.5 4.05 10.5 5.499 C 10.5 6.95 9.355 8.124 7.942 8.124 M 7.942 1.0 C 3.923 1.0 1.001 5.499 1.001 5.499 C 1.001 5.499 3.923 9.999 7.942 9.999 C 11.962 9.999 14.884 5.499 14.884 5.499 C 14.884 5.499 11.962 1.0 7.942 1.0"/>
+                                    <path fill="currentColor" d="M 7.942 4.375 C 7.337 4.375 6.846 4.878 6.846 5.5 C 6.846 6.121 7.337 6.625 7.942 6.625 C 8.548 6.625 9.038 6.121 9.038 5.5 C 9.038 4.878 8.548 4.375 7.942 4.375"/>
+                                </svg>
+
+                        </span>
+                        Streaming
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getScreen" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2017 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <circle cx="4" cy="8" r="2.5" fill="none" stroke="rgb(26, 26, 26)" stroke-width="1.2"/>
+                                    <circle cx="12" cy="8" r="2.5" fill="none" stroke="rgb(26, 26, 26)" stroke-width="1.2"/>
+                                    <line x1="4" y1="10.5" x2="12" y2="10.5" fill="none" stroke="rgb(26, 26, 26)"/>
+                                </svg>
+
+                        </span>
+                        Payout
+                    </a>
+                </td>
+                </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getCalls" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2015 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 15 15">
+                                    <path fill="none" stroke="currentColor" d="M 7.5009 14 C 8.3259 14 9.0009 13.325 9.0019 12.5 L 9.0009 11.725 C 9.1479 11.673 9.2909 11.616 9.4299 11.551 L 10.1759 12.298 C 10.7599 12.881 11.7149 12.88 12.2969 12.297 C 12.5899 12.005 12.7349 11.619 12.7349 11.235 C 12.7349 10.852 12.5899 10.467 12.2979 10.175 L 11.5519 9.429 C 11.6179 9.289 11.6739 9.146 11.7259 9 L 12.5009 8.999 C 13.3259 9 14.0009 8.325 14.0009 7.5 C 14.0009 6.674 13.3259 6 12.5009 5.999 L 11.7259 6 C 11.6739 5.853 11.6179 5.71 11.5519 5.571 L 12.2979 4.825 C 12.5889 4.533 12.7349 4.148 12.7349 3.764 C 12.7349 3.379 12.5899 2.995 12.2989 2.704 C 11.7149 2.119 10.7599 2.119 10.1769 2.702 L 9.4299 3.449 C 9.2899 3.382 9.1479 3.327 9.0009 3.275 L 9.0009 2.499 C 9.0009 1.674 8.3259 0.999 7.5009 0.999 C 6.6759 0.999 6.0009 1.674 6.0009 2.499 L 6.0009 3.275 C 5.8549 3.327 5.7109 3.383 5.5709 3.449 L 4.8249 2.703 C 4.2419 2.12 3.2869 2.12 2.7039 2.703 C 2.4119 2.995 2.2659 3.379 2.2659 3.763 C 2.2659 4.148 2.4119 4.532 2.7029 4.824 L 3.4499 5.571 C 3.3839 5.71 3.3289 5.853 3.2759 6 L 2.5009 5.999 C 1.6759 6 1.0009 6.674 1.0009 7.5 C 1.0009 8.325 1.6759 9 2.5009 9 L 3.2759 9 C 3.3279 9.146 3.3839 9.289 3.4499 9.429 L 2.7039 10.175 C 2.4119 10.467 2.2649 10.852 2.2659 11.236 C 2.2649 11.621 2.4129 12.006 2.7029 12.296 C 3.2869 12.88 4.2419 12.88 4.8249 12.297 L 5.5719 11.551 C 5.7109 11.616 5.8539 11.673 6.0009 11.725 L 5.9999 12.5 C 6.0009 13.325 6.6759 14 7.5009 14 Z"/>
+                                    <path fill="none" stroke="currentColor" d="M 7.5 5.6 C 8.548 5.6 9.4 6.452 9.4 7.5 C 9.4 8.548 8.548 9.4 7.5 9.4 C 6.452 9.4 5.6 8.548 5.6 7.5 C 5.6 6.452 6.452 5.6 7.5 5.6"/>
+                                </svg>
+
+                        </span>
+                        Settings
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark sendCustom" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2018 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <path fill="currentColor" d="M 15.5 8 a 0.5 0.5 0 0 1 -0.24 0.43 L 11 10.99 V 9.82 L 14.03 8 11 6.18 V 5.01 l 4.26 2.56 A 0.5 0.5 0 0 1 15.5 8 Z"/>
+                                    <polygon fill="currentColor" points="10.77 3 6.32 13 5.23 13 9.68 3 10.77 3"/>
+                                    <path fill="currentColor" d="M 5 6.18 1.97 8 5 9.82 v 1.17 L 0.74 8.43 a 0.505 0.505 0 0 1 0 -0.86 L 5 5.01 Z"/>
+                                </svg>
+
+                        </span>
+                        Console
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getCalls" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2015 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <circle fill="none" stroke="currentColor" cx="8" cy="8" r="7.5"/>
+                                    <path fill="none" stroke="currentColor" d="M 5.5 1.0 L 5.5 10.5"/>
+                                    <path fill="none" stroke="currentColor" d="M 3.0 9.0 L 5.5 11.0 L 8.0 9.0"/>
+                                    <path fill="none" stroke="currentColor" d="M 10.5 15.0 L 10.5 5.5"/>
+                                    <path fill="none" stroke="currentColor" d="M 13.0 7.0 L 10.5 5.0 L 8.0 7.0"/>
+                                </svg>
+
+                        </span>
+                        Send Feedback
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="d-flex flex-row text-dark getFiles" href="#">
+                        <span>
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <!-- Copyright © 2015 Apple Inc. All rights reserved. -->
+                                <svg class="mr-2" width="25" xmlns="http://www.w3.org/2000/svg" id="root" version="1.1" viewBox="0 0 16 16">
+                                    <path fill="none" stroke="currentColor" d="M 2.5 1.5 L 2.5 14.5 L 13.5 14.5 L 13.5 5.5 L 9.5 1.5 L 2.5 1.5 Z"/>
+                                    <path fill="currentColor" d="M 9.0 3.0 L 9.0 6.0 L 12.0 6.0 Z"/>
+                                </svg>
+                        </span>
+                        Courses
+                    </a>
+                </td>
+            </tr>
+        </table>
+      </div>
+
+      <div class="col mr-2">
+      {% block content %}
+      {% endblock %}
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/clicks.js' %}"></script>
+
+</body>
+</html>
